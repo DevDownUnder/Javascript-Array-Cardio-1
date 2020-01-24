@@ -121,12 +121,19 @@ console.table(alpha);
 // Sum up the instances of each of these
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'trampoline'];
 
+//reduce (add up) the data in the array (vehicles) and create an object out of the result
+//(function(accumulator, current value))
 const transportation = data.reduce(function(obj, item){
+    debugger;
+//If there is no values in the array, object (accumulator) = 0
 if(!obj[item]){
     obj[item] = 0;
 }
+//else loop through the array + 1
 obj[item]++;
+//return the object (accumulation)
 return obj;
+//the final { } created a spaces  for that object to go
 }, {});
 
-console.table(transportation)
+console.log(transportation)
