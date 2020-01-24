@@ -108,9 +108,13 @@ console.table(de)
 // Sort the people alphabetically by last name
 //Try to change to an ES6 arrow function
 
+//Sort the array (people) (function(comparison 1, comparison 2))
 const alpha = people.sort(function(lastOne, nextOne){
+    debugger;
+    //split the first and last names at the , point
     const [alast, afirst] = lastOne.split(', ');
     const [blast, bfirst] = nextOne.split(', ');
+    //Is first lastname is > second lastname? if yes, add one to the index place. -1 if not
     return alast > blast ? 1: -1;
 });
 
@@ -124,7 +128,6 @@ const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bik
 //reduce (add up) the data in the array (vehicles) and create an object out of the result
 //(function(accumulator, current value))
 const transportation = data.reduce(function(obj, item){
-    debugger;
 //If there is no values in the array, object (accumulator) = 0
 if(!obj[item]){
     obj[item] = 0;
@@ -136,4 +139,4 @@ return obj;
 //the final { } created a spaces  for that object to go
 }, {});
 
-console.log(transportation)
+//console.log(transportation)
