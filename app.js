@@ -33,10 +33,10 @@ const fifteen = inventors.filter(function (inventor) {
 //console.table(fifteen);
 
 
-//Or
+//Or in shorthand
 
-const fifteenA = inventors.filter(inventor => 
- (inventor.year >= 1500 && inventor.year < 1600)
+const fifteenA = inventors.filter(inventor =>
+    (inventor.year >= 1500 && inventor.year < 1600)
 );
 
 console.table(fifteenA);
@@ -52,10 +52,11 @@ console.log(fullNames);
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
 
-const ordered = inventors.sort(function(a, b){
-if(a.year > b.year){
-    return 1;}
-    else{
+const ordered = inventors.sort(function (a, b) {
+    if (a.year > b.year) {
+        return 1;
+    }
+    else {
         return -1;
     }
 });
@@ -64,12 +65,9 @@ console.table(ordered)
 
 //Or as a Ternary operator (a shorthand if/else)
 
-const orderedA = inventors.sort((a, b) => a.year > b.year ? +1 : -1 );
+const orderedA = inventors.sort((a, b) => a.year > b.year ? +1 : -1);
 
 console.table(orderedA)
-
-
-
 
 
 // Array.prototype.reduce()
