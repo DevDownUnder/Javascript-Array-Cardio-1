@@ -106,6 +106,7 @@ console.table(de)
 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
+//Try to change to an ES6 arrow function
 
 const alpha = people.sort(function(lastOne, nextOne){
     const [alast, afirst] = lastOne.split(', ');
