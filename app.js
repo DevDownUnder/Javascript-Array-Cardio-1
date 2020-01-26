@@ -118,7 +118,7 @@ const alpha = people.sort(function(lastOne, nextOne){
     return alast > blast ? 1: -1;
 });
 
-console.table(alpha);
+console.log(alpha);
 
 
 // 8. Reduce Exercise
